@@ -2,11 +2,13 @@
 
 1.  Download git > cli > install
 2.  Create git A/C
-    '''
 
+    ```
     - git config --gloal user.email "enter your email"
     - git config --gloal user.name "enter your name"
-    - git config user.name ''' : Check
+    - git config user.name : Check
+
+    ```
 
 3.  If not on a Mac/Linux OS, download HYPER or MobaXterm or use VS code Terminal(view terminal) to work with CLI
 
@@ -133,6 +135,8 @@ Untrackable: guests whose snaps have not been taken yet
    - or authorise github in VS via github extension
 
 **Push**
+
+- You can directly push the dir to Github via VS code. Also its Syc feature will do the pull & push for you.
 
 - git remote add origion paste-URL : Attach remote github repo to local git on sys
   remote : workig with urls
