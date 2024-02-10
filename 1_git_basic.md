@@ -2,9 +2,12 @@
 
 1.  Download git > cli > install
 2.  Create git A/C
-    git config --gloal user.email "enter your email"
-    git config --gloal user.name "enter your name"
-    - git config user.name : Check
+    '''
+
+    - git config --gloal user.email "enter your email"
+    - git config --gloal user.name "enter your name"
+    - git config user.name ''' : Check
+
 3.  If not on a Mac/Linux OS, download HYPER or MobaXterm or use VS code Terminal(view terminal) to work with CLI
 
 **Git** : is a SW that keeps track of your project progress by taking snaps wrt TS & saves any changes/commits in its history. Just in case if you want to revert back/revisit to those changes or commits on your local sys's repository/dir.
@@ -22,16 +25,19 @@
 
 ### Terms
 
-**Working Dir** : git initialized repository/folder (empty) in local sys, i.e. pwd of the project (git-learn) ---> git init
-Where u initialize your local git repository & now git keeps track of changes made between present working dir (git-learn) & local repository (.git)
-**Local repository** (on PC) : After commit is done, changes are made/history is saved on local (.git) repository in VCS. It gets a name/hash-code-id via commit msg.
-**Remote repository :** a repo/dir/folder on server like github.
-**Staging Area** : an intermediate point, where you can pick & choose which files inside your projects working dir, you wanna commit. ---> git status
-**Untracked files** : Files in Red color, i.e. inside workig dir but not in staging area --> unsateged & uncommited
+- **Working Dir** : git initialized repository/folder (empty) in local sys, i.e. pwd of the project (git-learn) ---> git init
+  Where u initialize your local git repository & now git keeps track of changes made between present working dir (git-learn) & local repository (.git)
+- **Local repository** (on PC) : After commit is done, changes are made/history is saved on local (.git) repository in VCS. It gets a name/hash-code-id via commit msg.
+- **Remote repository :** a repo/dir/folder on server like github.
+- **Staging Area** : an intermediate point, where you can pick & choose which files inside your projects working dir, you wanna commit. ---> git status
+
+- **Untracked files** : Files in Red color, i.e. inside workig dir but not in staging area --> unsateged & uncommited
+
 e.g. Wedding photoSnaps, wedding guest couples will go onto 'stage' to clik a snap with the bride & bridegroom, which then later will be saved in a wedding album as a history 'respository' --> logs
 Untrackable: guests whose snaps have not been taken yet
-**Staging**: Add files to stage, Files in Green color & start tracking them in VCS ---> git add .
-**Commit :** Save changes made/ history/ Save points in VCS ---> git commit -m "type msg in present tense by convention"
+
+- **Staging**: Add files to stage, Files in Green color & start tracking them in VCS ---> git add .
+- **Commit :** Save changes made/ history/ Save points in VCS ---> git commit -m "type msg in present tense by convention"
 
 **Git Status :**
 
@@ -72,32 +78,32 @@ Untrackable: guests whose snaps have not been taken yet
 - git restore --staged name.txt : to unstage this file, file doesn't get deleted but just unstaged for snapShot
 - git add file-name : to stage again/re-stage > git status
 
-## Step 4 : Commit Changes & Save History snaps in repo\*\*
+### Step 4 : Commit Changes & Save History snaps in repo
 
 - git commit -m "added 3 lines of code - names.txt file modified"
 - git status : o/p : 1 files changed, insertions = 3 , deletions = 0
 
-## Step 5 : How to know history/logs\*\*
+### Step 5 : How to know History/Logs
 
 - git log : opens in vim, lastest commit at top & oldest at the bottom > Esc :q
 - Each commit is build/stacked ontop of each other & each has a UID hash-code in the history/repo
 - To del a commit/commits, copy the commit #id of the commit just below target commit that's to be removed
 
-## Step 6 : More commits to do, Uncommit\*\*
+### Step 6 : More Commits to do, Uncommit
 
 - rm -rf names.txt : uncommit a file but don't del it
 - git add names.txt > git commit -m "names.txt file was removed from this commit" > git log
 - git reset #commit_id-just-below-the-target-commit : to remove commits from the project, like a feature X > git status
 - git restore ??? : for changes made by mistake
 
-## Step 7: Stash Area/ git-staging/ Dont add in project History\*\*:
+### Step 7: Stash Area/ git-Staging/ Don't add in project History:
 
 - when u dont want a separate commit or changes made right now neither to be added nor to be removed in project history but to be kept & recalled whenever needed like some new feature-X >>> stash it (neither use nor loose atm)
   e.g. send some couples guests backstage & wheneva they're ready -> stage them -> snap -> save history
 - git add names.txt or git add . : for a particular file or for all changes made in the dir
 - git stash
 
-## Step 8: Bring commits (files) from Stash area to Unstaged area & Del permenently\*\*
+### Step 8: Bring commits (files) from Stash area to Unstaged area & Del Permenently
 
 - git stash pop : from stash to unstage area
 - git add .
@@ -105,9 +111,65 @@ Untrackable: guests whose snaps have not been taken yet
 
 - git stash clean
 
-## Step 9 : Compare Save points, Restore\*\*
+### Step 9 : Compare Save points, Restore
 
 - git diff : chk difference between current version (in Green) & last save point/ver (in Red)
 - git diff file-name : for a particular file
 
 - git checkout file-name.ext : restores currrent file to previous save point under VCS & the current changes will be lost in our local repo.
+
+--- **\*\*\*\***\_\_\_\_**\*\*\*\*** \_-------------------- ------------------ \***\*\*\*\*\***\_\_\***\*\*\*\*\*** **\*\***\_\_\_\*\*\
+
+# GitHub
+
+- A repo hosted on remote servers
+
+### Step 10 : Create A/C, Url, Push to remote repository
+
+1. Create a GitHub A/C > New or Profile > craete a New Repository > Name it > Pub/Pvt > Create > Copy its URL
+2. Goto PC termial:
+3. Gerate toke : profile > settig > devloveper > Ouath > Classic > ge
+   - git remote set-url origion https://paste-token@github.com/username/repo --> follow tokenisation docs
+   - or authorise github in VS via github extension
+
+**Push**
+
+- git remote add origion paste-URL : Attach remote github repo to local git on sys
+  remote : workig with urls
+  add : adds new url
+  origion : what will be the name of url that you're going to add (like phoneBook) but by convetion all the repo's under your personal github a/c are named as Origion
+- git remote -v : list all the URLs (origions) under your a/c in this github repo
+
+- git push -u origion main : to push the local repo to remote repo
+  origion : which url to push (customisable)
+  main : on what branch of the remote github repo.
+  -u : flag links remote repo with local --> sets upstream i.e. if we wish to continue working & pushing changes on the same branch (e.g. main) we dont've to mention it everytime but just the first time & then just this cmd "git push"
+
+### Step 11 : Branching, Rename, Visualize
+
+- https://learngitbranching.js.org/ : visualize branching {)
+- git commit > git commit ..., > git branch featureX : create a new branch >
+- git checkout featureX : ptr points now to featureX branch & commits will be done on feature branch
+- git checkout main : ptr moves to main & now if u do commit, that will be done on main branch
+- git commit : while u keep working on main, featureX branch remains unaffected & vice-versa
+- git checkout : to switch the Head ptr btw different branches
+
+  - **Head :** ptr that points to current working branch, were commits will be done.
+  - **Branching :** is making commits (c1,c2,..Cn) in a project that are linked to each other on a same branch 'Main' by default
+
+- Never commit changes to the main branch --> unless its tested & finalised, cause this is the actual working code that people are using
+- Working on a bug or new feature --> always create a new branch --> branch parallel to main --> Tested --> Merge into Main branch
+
+- git checkout : know current branch status
+- git checkout branch : know the brach youre curretlly on <-- to which Head\* ptr points
+- git checkout branch-name : switch to this branch
+
+**Create & Rename Branch**
+
+- git branch feature-X : create a new branch
+- git branch -M new-name : rename a branch i.e. current branch
+
+# Fixes
+
+- github repo > copy url > clone > push changes
+- edit git.config
