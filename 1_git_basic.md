@@ -148,7 +148,7 @@ git stash
 1. Create a GitHub A/C > New or Profile > craete a New Repository > Name it > Pub/Pvt > Create > Copy its URL
 2. Goto PC termial:
 3. Gerate toke : profile > setting > devloveper > Ouath > Classic > generate
-   - git remote set-url origion https://paste-token@github.com/username/repo --> follow tokenisation docs
+   - git remote set-url origin https://paste-token@github.com/username/repo --> follow tokenisation docs
    - or authorise github in VS via github extension
 
 **Push**
@@ -156,22 +156,22 @@ git stash
 - You can directly push the dir to Github via VS code. Also its Syc feature will do the pull & push for you.
 
 ```
-git remote add origion paste-URL : Attach remote github repo to local git on sys
+git remote add origin paste-URL : Attach remote github repo to local git on sys
 ```
 
 remote : workig with urls
 add : adds new url
-origion : what will be the name of url that you're going to add (like phoneBook) but by convetion all the repo's under your personal github a/c are named as Origion
+origin : what will be the name of url that you're going to add (like phoneBook) but by convetion all the repo's under your personal github a/c are named as Origin
 
 ```
-git remote -v : list all the URLs (origions) under your a/c in this github repo
+git remote -v : list all the URLs (origins) under your a/c in this github repo
 ```
 
 ```
-git push -u origion main : to push the local repo to remote repo
+git push -u origin main : to push the local repo to remote repo
 ```
 
-- origion : which url to push (customisable)
+- origin : which url to push (customisable)
 - main : on what branch of the remote github repo.
 - -u : flag links remote repo with local --> sets upstream i.e. if we wish to continue working & pushing changes on the same branch (e.g. main) we dont've to mention it everytime but just the first time & then just this cmd "git push"
 
@@ -191,8 +191,8 @@ git push -u origion main : to push the local repo to remote repo
 - Working on a bug or new feature --> always create a new branch --> branch parallel to main --> Tested --> Merge into Main branch
 
 ```
+  git branch : know the branch you're curretlly on <-- to which Head* ptr points
   git checkout : know current branch status
-  git checkout branch : know the brach youre curretlly on <-- to which Head\* ptr points
   git checkout branch-name : switch to this branch
 ```
 
@@ -207,3 +207,4 @@ git push -u origion main : to push the local repo to remote repo
 
 - github repo > copy url > clone > push changes
 - edit git.config
+- git push origin head
