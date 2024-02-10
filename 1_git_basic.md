@@ -14,14 +14,13 @@
 
 **Git** : is a SW that keeps track of your project progress by taking snaps wrt TS & saves any changes/commits in its history. Just in case if you want to revert back/revisit to those changes or commits on your local sys's repository/dir.
 
-- Its a VCS (Version Control Sys): let's say we created a file (f1.txt) in git 'VCS' & it created a save point (S1) --> Call it Version 1.
-  Later on, we modified the the file (f1.txt) & it created another save point (S2) --> call it Version 2.
-  Similarly, it creates n number of versions (Sn) --> Ver-n.
-  Down the line if anything goes wrong/unexpected, we can always rollback to earlier save points or Versions from the current version.
+- Its a VCS (Version Control Sys):
+  - let's say we created a file (f1.txt) in git 'VCS' & it created a save point (S1) --> Call it Version 1.
+  - Later on, we modified the the file (f1.txt) & it created another save point (S2) --> call it Version 2.
+  - Similarly, it creates n number of versions (Sn) --> Ver-n.
+  - Down the line if anything goes wrong/unexpected, we can always rollback to earlier save points or Versions from the current version.
 
 **Github** : is a platform that hosts git repositories/any repo/any dir or share with community
-
---- **\_\_** ------------- **\*\***\_\_\_\_**\*\*** **\*\*\*\***\_\_**\*\*\*\*** \***\*\*\*\*\***\_\_\***\*\*\*\*\*** \***\*\*\*\*\***\
 
 # Git BASICS:
 
@@ -35,8 +34,8 @@
 
 - **Untracked files** : Files in Red color, i.e. inside workig dir but not in staging area --> unsateged & uncommited
 
-e.g. Wedding photoSnaps, wedding guest couples will go onto 'stage' to clik a snap with the bride & bridegroom, which then later will be saved in a wedding album as a history 'respository' --> logs
-Untrackable: guests whose snaps have not been taken yet
+  - e.g. Wedding photoSnaps, wedding guest couples will go onto 'stage' to clik a snap with the bride & bridegroom, which then later will be saved in a wedding album as a history 'respository' --> logs
+  - Untrackable: guests whose snaps have not been taken yet
 
 - **Staging**: Add files to stage, Files in Green color & start tracking them in VCS ---> git add .
 - **Commit :** Save changes made/ history/ Save points in VCS ---> git commit -m "type msg in present tense by convention"
@@ -140,10 +139,6 @@ git stash
   git checkout file-name.ext : restores currrent file to previous save point under VCS & the current changes will be lost in our local repo.
 ```
 
-```
-_______________________________________________________________________________________________________________________________________________________
-```
-
 # GitHUB
 
 - A repo hosted on remote servers
@@ -152,7 +147,7 @@ ________________________________________________________________________________
 
 1. Create a GitHub A/C > New or Profile > craete a New Repository > Name it > Pub/Pvt > Create > Copy its URL
 2. Goto PC termial:
-3. Gerate toke : profile > settig > devloveper > Ouath > Classic > ge
+3. Gerate toke : profile > setting > devloveper > Ouath > Classic > generate
    - git remote set-url origion https://paste-token@github.com/username/repo --> follow tokenisation docs
    - or authorise github in VS via github extension
 
@@ -173,12 +168,12 @@ git remote -v : list all the URLs (origions) under your a/c in this github repo
 ```
 
 ```
-  git push -u origion main : to push the local repo to remote repo
+git push -u origion main : to push the local repo to remote repo
 ```
 
-origion : which url to push (customisable)
-main : on what branch of the remote github repo.
--u : flag links remote repo with local --> sets upstream i.e. if we wish to continue working & pushing changes on the same branch (e.g. main) we dont've to mention it everytime but just the first time & then just this cmd "git push"
+- origion : which url to push (customisable)
+- main : on what branch of the remote github repo.
+- -u : flag links remote repo with local --> sets upstream i.e. if we wish to continue working & pushing changes on the same branch (e.g. main) we dont've to mention it everytime but just the first time & then just this cmd "git push"
 
 ### Step 11 : Branching, Rename, Visualize
 
