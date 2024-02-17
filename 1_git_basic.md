@@ -349,12 +349,15 @@ select a 'pick' commit & squash other by prefixing s in front of the IDs
 ```
 
 - **Commit Order: oldest at TOP & NEWEST at bottom i.e. top to bottom**
+
+```
   Rebase Output: ------> To Squash:
   pick ac123 ----------> Below 2 commits will get squashed/merged in this commit only i.e. with the previous/preceeeding Pick commit
   pick ac124 ----------> s ac124 : #prefix
   pick ac125 ----------> s ac125 : #prefix
   pick ac126 ----------> Below commit will get squashed with this (Pick commit)
   pick ac127 ----------> s ac127 : #prefix
+```
 
 Esc:x #to exit the '-i' interactive shell env & to write commit msg > i > nav inside the file to the line where it says enter commit msg to your changes, just above the rebase progress #msg like commit merged or squashed > :x
 
