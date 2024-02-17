@@ -367,7 +367,6 @@ git log
 git push origin tmp or any-branch
 
 git reset --hard #hash-id-of-oldest-commit : if u want to remove\* other commits | BE CATIOUS as gets removed from git & VS code as well
-
 ```
 
 **Merge Conflict**
