@@ -231,6 +231,8 @@ git push origin HEAD : this also does the same, for subsequent pushes on same br
 - Never commit changes to the main branch --> unless its tested & finalised, cause this is the actual working code that people are using
 - Working on a bug or new feature --> always create a new branch --> branch parallel to main --> Tested --> Merge into Main branch
 
+---
+
 ```
 git branch : know the branch you're curretlly on <-- to which Head\* ptr points
 git checkout : know current branch status
