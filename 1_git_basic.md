@@ -70,22 +70,22 @@ git add . : to add all the files in current dir & make them ready for staging ar
 git add file-name.ext : to add an individual file of current dir & get it ready for staging area
 git status : will show files staged (in green) ready for a (snapShot) i.e. next commit or if any changes made to the files (in working dir)
 git commit -m "enter your msg : like added xyz file or 1st commit"
-```
 
 -m is msg flag, commit the changes or take snapShot of the staged files & save in History/repo '.git'
-o/p: added file-name, 0 lines of code inserted, 0 deleted
+output : added file-name, 0 lines of code inserted, 0 deleted
+```
 
 ```
 git status : o/p is Nothing (if no more snaps/changes to take), working tree clean
 ```
 
-### Step 2 : Add some data or lines of code in files
+### Step 2 : Add some Data or Lines of code in files
 
 - vim name.txt > i > add some code lines > Esc > :wq > y > cat name.txt
 - git status : o/p : changes not staged for commit yet, modified : file-name
 - you may use any of your fav editors, if not liking Vim/Nano
 
-### Step 3 : Stage the modified files or unstage a file
+### Step 3 : Stage the modified files or Unstage a file
 
 ```
 git add . or git add file-name : stage the changes made > git status
@@ -109,7 +109,7 @@ git log : opens in vim, lastest commit at top & oldest at bottom ( ref. see TS) 
 - Each commit is build/stacked ontop of each other & each has a UID hash-code in the history/repo
 - To del a commit/commits, copy the commit #id of the commit just below target commit that's to be removed
 
-### Step 6 : More Commits to do, Uncommit
+### Step 6 : More Commits to do | Uncommit
 
 ```
 rm -rf names.txt : uncommit a file but don't del it
@@ -122,10 +122,10 @@ git reset HEAD~ : to go 1 step back & uncommit the present commit/ to previous c
 git restore  : for changes made by mistake ???
 ```
 
-### Step 7: Stash Area/ git-Staging/ Don't add in project History:
+### Step 7: Stash Area | git-Staging | Don't add in project History:
 
 - When you dont want a separate commit or changes made right now neither to be added nor to be removed in project history but to be kept & recalled whenever needed, like some new feature-X >>> stash it (neither use nor loose atm) but remove from commit history.
-  e.g. send some couples guests backstage & wheneva they're ready -> stage them -> snap -> save history
+  e.g. send some couples guests backstage & whenever they're ready -> stage them -> snap -> save history
 
 ```
 git add names.txt   : for a particular file
@@ -159,7 +159,7 @@ git stash : send back to stash area & remove from commit history
 git stash clean
 ```
 
-### Step 9 : Compare Save points, Restore
+### Step 9 : Compare Save points | Restore
 
 ```
 git diff : chk difference between current version (in Green) & last save point/ver (in Red) i.e. what is changed but not staged
@@ -175,12 +175,12 @@ git checkout file-name.ext : restores currrent file to previous save point under
 
 ### Terms
 
-**Local git repo** : repo on your local sys
-**Remote git repo** : repo on remote server like on github (usually under your personal account)
-**Origin** : url of a remote repo (main branch)
-**Upstream** : Orginal (owners) project from which you've forked under your personal github a/c
+- **Local git repo** : repo on your local sys
+- **Remote git repo** : repo on remote server like on github (usually under your personal account)
+- **Origin** : url of a remote repo (main branch)
+- **Upstream** : Orginal (owners) project from which you've forked under your personal github a/c
 
-### Step 10 : Create A/C, Url, Push to remote repository
+### Step 10 : Create A/C | Url | Push to remote repository
 
 1. Create a GitHub A/C > New or Profile > craete a New Repository > Name it > Pub/Pvt > Create > Copy its URL
 2. Goto PC termial:
@@ -214,7 +214,7 @@ git push origin HEAD : this also does the same, for subsequent pushes on same br
 - main : on what branch of the remote github repo.
 - -u : flag links remote repo with local --> sets upstream i.e. if we wish to continue working & pushing changes on the same branch (e.g. main) we dont've to mention it everytime but just the first time & then just this cmd "git push"
 
-### Step 11 : Branching, Rename, Visualize
+### Step 11 : Branching | Rename | Visualize
 
 - https://learngitbranching.js.org/ : visualize branching {)
 - git commit > git commit ..., > git branch featureX : create a new branch >
@@ -223,11 +223,15 @@ git push origin HEAD : this also does the same, for subsequent pushes on same br
 - git commit : while u keep working on main, featureX branch remains unaffected & vice-versa
 - git checkout : to know current branch status
 
-  - **Head :** ptr that points to current working branch, were commits will be done.
-  - **Branching :** is making commits (c1,c2,..Cn) in a project that are linked to each other on a same branch 'Main' by default
+---
+
+    - **Head :** ptr that points to current working branch, were commits will be done.
+    - **Branching :** is making commits (c1,c2,..Cn) in a project that are linked to each other on a same branch 'Main' by default
 
 - Never commit changes to the main branch --> unless its tested & finalised, cause this is the actual working code that people are using
 - Working on a bug or new feature --> always create a new branch --> branch parallel to main --> Tested --> Merge into Main branch
+
+---
 
 ```
 git branch : know the branch you're curretlly on <-- to which Head\* ptr points
@@ -245,7 +249,7 @@ git branch -M new-name : rename a branch i.e. current branch
 git branch -d branch-name : to del a branch, but you need to switch first onto a different branch. Otherwise err:'this your present branch'
 ```
 
-### Step 12 : Frok / Clone / Pull Request (PR) & Contribute to an existing GitHub project
+### Step 12 : Frok | Clone | Pull Request (PR) | Contribute to an existing GitHub project
 
 - **Fork** :
 - Helps us to collab. using remote repo's to start working in a team or contribute your code to open source projects
@@ -253,15 +257,13 @@ git branch -d branch-name : to del a branch, but you need to switch first onto a
 - Problem you may face, is access to that specific project account, so we Fork that project under our own A/C on github > Code > copy https url
 - once forked, you own it & have full permission to do the changes in your forked branch under your a/c
 
-**Clone**
-
-- pulls/grabs a repo in its entiretity, into your local PC & stores it in your working dir
+**Clone** : pulls/grabs a repo in its entiretity, into your local PC & stores it in your working dir
 
 ```
 git clone paste-copied-url : retrive an entire repo from hosted location url
 ```
 
-- **Upstream url** : is the url from where you've forked (actual owners url).
+**Upstream url** : is the url from where you've forked (actual owners url).
 
 ```
 git remote add upstream paste-Owners-url from where you've forked yours.
@@ -272,6 +274,7 @@ Project listed under your a/c will be your personal & others will be from the fo
 
 ```
 git pull : fetch & merge any commits from the tracking remote brach/repo
+git pull branch-name : in case remote repo is ahed of local git repo. Do pull & the push
 ```
 
 **PULL Request** : after forking/cloning Owners main-project & making changes to your copy, you create a (PR) pull-req to the Owners upstream, requesting/suggesting him to approve the changes you've made & eventually merge it with the owner projects main branch. Then your PR gets reviewed if any changes needed, tested & finally merged.
@@ -311,7 +314,7 @@ git push origin main : local git main & upstream git main are already in sync, i
 
 ```
 git log
-git log branch_A..branch_B : show commits on branch_A that are't on branch_B
+git log git : show commits on branch_A that are't on branch_B
 git log --follow file-name : show commits that changed file, even across renames
 git log branch_B...branch_A : show diff what is in branch_A thats not in branch_B
 git show[SHA] : show ay object in git in human readable form
@@ -398,7 +401,7 @@ git rm --cached -r . : if staged without adding git ignore
 - **RULES**:
 - open .gitigore file > write individual file names on each new line that you wish to be ignored during stage & commit
 - anything starting with #hash is a comment in '.gitigore' file
-- wild cards char usage : e.g. '_' , if u want to make commit & ignore all the files with extension '.txt' --> _.txt
+- wild cards char usage : e.g. '\*' , if u want to make commit & ignore all the files with extension '.txt' --> \*.txt
 
 ```
 
